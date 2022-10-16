@@ -1,3 +1,5 @@
+#include <string.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -52,7 +54,8 @@ int _identifier(const char *format, f_id func_list[], va_list args)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
-		{/*if %, we loop through the stuct list above*/
+		{
+			/*if %, we loop through the stuct list above*/
 			for (j = 0; func_list[j].id != NULL; j++)
 			{
 				if (format[i + 1] == func_list[j].id[0])
