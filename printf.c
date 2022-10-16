@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	if (!format)
-		return (-1); /*falsy value used to check if format is empty*/
+		return (-1); /*false value used to check if format is empty*/
 
 	va_start(args, format);
 	len = _identifier(format, func_list, args);
@@ -44,16 +44,15 @@ int _printf(const char *format, ...)
  * @args: param
  * Return: int
  */
-//printf("%i,", 2);
+
 int _identifier(const char *format, f_id func_list[], va_list args)
 {
-	
 	int i, j, k, len = 0;
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
-		{/*if %, we loop throught the stuct list above*/
+		{/*if %, we loop through the stuct list above*/
 			for (j = 0; func_list[j].id != NULL; j++)
 			{
 				if (format[i + 1] == func_list[j].id[0])
