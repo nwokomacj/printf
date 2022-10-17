@@ -1,6 +1,11 @@
-#include <string.h>
-#include <stdio.h>
 #include "main.h"
+
+/*
+ * File: _printf.c
+ * Authors: [Nwokoma CJ](https://github.com/nwokomacj) and
+ * [CHIKELU GERALD](https://github.com/700brains).
+ * Desc: Performs formatted output conversion and Print Data
+ */
 
 /**
  * _printf - output value to stdio
